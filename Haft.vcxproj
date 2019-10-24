@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="header\AdaboostDetector.h" />
+    <ClInclude Include="header\AGFLabeler.h" />
+    <ClInclude Include="header\BayesianHistograms.h" />
+    <ClInclude Include="header\BayesianPixelClassifier.h" />
+    <ClInclude Include="header\BayesianSegmenter.h" />
+    <ClInclude Include="header\Bezier.h" />
+    <ClInclude Include="header\Canny.h" />
+    <ClInclude Include="header\ContourExtractor.h" />
+    <ClInclude Include="header\Corner.h" />
+    <ClInclude Include="header\CornersExtractor.h" />
+    <ClInclude Include="header\DatabaseReader.h" />
+    <ClInclude Include="header\Detector.h" />
+    <ClInclude Include="header\Evaluator.h" />
+    <ClInclude Include="header\Features.h" />
+    <ClInclude Include="header\FixedFunctionClassifier.h" />
+    <ClInclude Include="header\Follower.h" />
+    <ClInclude Include="header\GFTTExtractor.h" />
+    <ClInclude Include="Header\Globals.h" />
+    <ClInclude Include="header\voxar_haft.h" />
+    <ClInclude Include="header\HaftDll.h" />
+    <ClInclude Include="header\Hand.h" />
+    <ClInclude Include="header\HandDetector.h" />
+    <ClInclude Include="header\Histogram.h" />
+    <ClInclude Include="header\HSVRGBClassifier.h" />
+    <ClInclude Include="header\HSVSobottkaPitas.h" />
+    <ClInclude Include="header\ImageProcessor.h" />
+    <ClInclude Include="header\Labeler.h" />
+    <ClInclude Include="header\LUTClassifier.h" />
+    <ClInclude Include="header\LutManager.h" />
+    <ClInclude Include="header\PanFollower.h" />
+    <ClInclude Include="header\PixelClassifier.h" />
+    <ClInclude Include="header\PRFLabeler.h" />
+    <ClInclude Include="header\QuadsFinder.h" />
+    <ClInclude Include="header\Refiner.h" />
+    <ClInclude Include="header\SegmentationEvaluator.h" />
+    <ClInclude Include="header\Segmenter.h" />
+    <ClInclude Include="header\SingleGaussianClassifier.h" />
+    <ClInclude Include="header\Skeletonizer.h" />
+    <ClInclude Include="header\Target.h" />
+    <ClInclude Include="header\TargetIDManager.h" />
+    <ClInclude Include="header\ThresholdApplier.h" />
+    <ClInclude Include="header\Tracker.h" />
+    <ClInclude Include="header\Tracker2.h" />
+    <ClInclude Include="header\UI.h" />
+    <ClInclude Include="header\Util.h" />
+    <ClInclude Include="header\YCrCbGarciaTziritas.h" />
+    <ClInclude Include="header\YCrCbHSVClassifier.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\AdaboostDetector.cpp" />
+    <ClCompile Include="Source\Detector.cpp" />
+    <ClCompile Include="Source\Globals.cpp" />
+    <ClCompile Include="Source\voxar_haft.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{40111A34-7CAA-4791-A2B4-9F71367A032E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Haft</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)output\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediate\$(Configuration)\</IntDir>
+    <TargetName>voxar_haft</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)output\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediate\$(Configuration)\</IntDir>
+    <TargetName>voxar_haft</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;HAFT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)Header;$(SolutionDir)..\..\ThirdParty\opencv\opencv-2.4.10\build\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>"$(SolutionDir)..\..\ThirdParty\OpenCV\opencv-2.4.10\build\x86\vc12\lib\*d.lib" %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;HAFT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)Header;$(SolutionDir)..\..\ThirdParty\opencv\opencv-2.4.10\build\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalOptions>"$(SolutionDir)..\..\ThirdParty\OpenCV\opencv-2.4.10\build\x86\vc12\lib\*.lib" %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

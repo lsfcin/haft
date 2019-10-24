@@ -1,0 +1,26 @@
+Voxar - Hand and Face Tracker (Haft)
+================================================================================
+
+Package contents:
+                                   
+    * haft 
+		Contains the header files and code libraries 
+		for creating native Haft-enabled applications.
+
+    Note: the library package only includes the files for its respective OS versions
+    and for the specified IDEs.
+ 
+Dependencies:
+	
+	1. thirdparty/opencv/opencv-2.4.10
+
+Usage:
+
+	1. Include voxar_haft.h (available in the "Header" folder)
+	2. Link to voxar_haft.lib (availabe in "Output/Debug" or "Output/Release" folder)
+	3. Use the voxar_haft.dll (availabe in "Output/Debug" or "Output/Release" folder)
+
+--------------------------------------------------------------------------------
+Copyright © 2011-2015 Federal University of Pernambuco. All rights reserved.
+
+Use subject to the terms of the license discrebed in the file LICENSE.txt.
